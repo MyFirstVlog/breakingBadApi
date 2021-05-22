@@ -1,0 +1,29 @@
+.App {
+  text-align: center;
+}
+
+.App-title {
+  color: white;
+}
+
+
+.App-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.App-results {
+  flex-shrink: 2;
+}
+
+.App-content {
+  background-color: #150202;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+  padding: 16px;
+  text-align: left;
+}
