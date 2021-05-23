@@ -1,6 +1,15 @@
 .App {
   text-align: center;
 }
+.btnAdd{
+  background-color: black;
+  color: aliceblue;
+  border-radius: 18px;
+  
+}
+.btnAdd :hover{
+  background-color:blanchedalmond
+}
 
 .App-title {
   display: block;

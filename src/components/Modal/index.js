@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function Modal({name,status}){
-    console.log('esto es lo que me llaga', name)
+
     return(
         <>
                 

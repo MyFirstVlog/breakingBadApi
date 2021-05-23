@@ -6,22 +6,23 @@
 
 }
 .CharacterInd{
-    border: dotted;
-    border-color: aliceblue;
+   
+    
 }
 .imagen{
     display:flex;
     flex-direction: column;
     
-    border: dotted;
+    
     width: auto;
-    border-color: rgb(36, 149, 249);
+    
 }
 .Quotes{
+    margin-top: 20px;
     display:flex;
     flex-direction: column;
     text-align: center;
     width: auto;
-    border: dotted;
-    border-color: rgb(33, 209, 69);
+   
+    
 }

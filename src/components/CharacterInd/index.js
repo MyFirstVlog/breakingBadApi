@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'wouter'
 import './index.css'
-export default function CharacterInd({char_id,img,name,status}){
+export default function CharacterInd({char_id,img,name,status, quotes}){
 
     return ( <>
         <div className="CharacterInd">   
@@ -11,7 +11,8 @@ export default function CharacterInd({char_id,img,name,status}){
             </div>   
             <div className="Quotes">
                 
-                <h3>{name}-{status}</h3>
+                <h1>{name}-{status}</h1>
+                <p>{quotes}</p>
 
              </div>
         

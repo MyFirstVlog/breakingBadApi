@@ -1,14 +1,33 @@
 import {useEffect, useState, useContext} from 'react'
 import getCharacter from '../services/getCharacter'
 import CharactersContext from '../context/CharactersContext'
+
+const initialPage = 0
+
 export default function useCharacter(){
     const {characters,setCharacters} = useContext(CharactersContext)
+
+    const [page, setPage]= useState(initialPage)
+
+
     //const [characters,setCharacters] = useState('')
     useEffect(function(){
         getCharacter().then(images => {
             setCharacters(images)
-        }).catch(console.error("vacio"))
+        })
     },[setCharacters])
-    console.log('charactersUse',characters)
-    return characters
+
+    
+
+    useEffect(function(){
+        if(page != initialPage){
+            return getCharacter({page:page}).then(next =>{
+                setCharacters(prev => prev.concat(next))
+            })
+        }
+        
+    },[page])
+
+    return {characters,page,setPage}
+
 }

@@ -4,7 +4,13 @@ import ListOfCharacters from '../../components/ListOfCharacters'
 import getCharacter from '../../services/getCharacter'
 export default function Home(){
 
-  const characters = useCharacter()
+  const {characters, page, setPage}= useCharacter()
+
+  const handleNextPage =()=>{
+    console.log('entre a paginacion')
+    setPage(prevPage => prevPage + 1)
+  }
+  
  // const imagene = getCharacter()
   console.log('homecha', characters)
   
@@ -14,14 +20,15 @@ export default function Home(){
         <div className="App-main">
             <div className="App-results">
                 <h3 className="App-title">Main Characters</h3>      
-                <ListOfCharacters characters={characters} />
+                <ListOfCharacters characters={characters} />                
             </div>            
         </div>
+        <button className='btnAdd' onClick = {handleNextPage}>More Characters</button>
         </>
     )
 }
 
-
+// <button onClick = {handleNextPage}>Get next Page </button>
 
 
 

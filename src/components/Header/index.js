@@ -6,10 +6,12 @@ export default function Header(){
         <>
             <header class="p-3 bg-dark text-white">
                 <div class="container-fluid"> 
-                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"> 
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-end"> 
                     <Link to='/' class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
                     <figure className="App-logo">
-                        <img alt='logo'src="/favicon.ico"/>
+                        <img alt='logo'src="/heisenberg.png">
+                            
+                        </img>
                     </figure>
                     </Link>
 
@@ -26,9 +28,12 @@ export default function Header(){
                         </li>                       
                         <li><a href="#" class="nav-link px-2 text-white">About</a></li>
                         </ul>
+                        
                         <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
                         <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search"/>
                         </form>
+
+                        
 
                         <div class="text-end">
                             <button type="button" class="btn btn-outline-light me-2">Login</button>
