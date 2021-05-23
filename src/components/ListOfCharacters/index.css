@@ -1,0 +1,36 @@
+:root {
+  --gridList-column: 500px;
+  --gridList-rows: 200px;
+  --gridList-gap: 6px;
+}
+
+.listOfCharacters{
+    
+    margin-left: 10%;
+    display: grid;
+    justify-content: center;
+    
+    min-height: 100vh;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px 0px;
+    
+    
+    
+   
+}
+
+
+@media screen and (min-width: 37.5rem) {
+  :root {
+    --gridList-column: 500px;
+    --gridList-rows: 200px;
+  }
+}
+
+
+@media screen and (min-width: 60rem) {
+  :root {
+    --gridList-column: 500px;
+    --gridList-rows: 210px;
+  }
+}

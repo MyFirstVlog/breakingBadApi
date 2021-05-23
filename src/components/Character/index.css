@@ -1,0 +1,49 @@
+.Character {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: .3em;
+    position: relative;
+    width: auto;
+    
+  }
+.Character .btnInfo{
+  background-color: #000;
+  border: #000;
+  width: 35%;
+  border-radius: 10px;
+  
+}
+
+.Character .btnInfo2{
+  background-color: rgb(165, 65, 65);
+  border: #000;
+  width: 35%;
+  border-radius: 10px;
+  z-index: 10000000;
+  
+}
+.Character #exampleModal{
+  color: #000;
+}
+
+  .Character-link{
+    color: #000;
+    display: block;
+    text-decoration: none;
+    position: relative;
+    width: 35%;
+  }
+
+  .Character-link img{
+    height: inherit;
+    object-fit: cover;
+  }
+
+  .Character img {
+    width: 35%;
+    object-fit: contain;
+    vertical-align: top;
+    z-index: 0;
+  }
+
+  

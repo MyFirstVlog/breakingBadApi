@@ -3,8 +3,15 @@
 }
 
 .App-title {
+  display: block;
+  text-align: center;
   color: white;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: larger;
 }
+
 
 
 .App-main {

@@ -1,12 +1,20 @@
 import React from 'react'
-
+import useCharacter from '../../hooks/useCharacter'
+import ListOfCharacters from '../../components/ListOfCharacters'
+import getCharacter from '../../services/getCharacter'
 export default function Home(){
+
+  const characters = useCharacter()
+ // const imagene = getCharacter()
+  console.log('homecha', characters)
+  
     return (
         <>
         
         <div className="App-main">
             <div className="App-results">
-                <h3 className="App-title">Última búsqueda</h3>       
+                <h3 className="App-title">Main Characters</h3>      
+                <ListOfCharacters characters={characters} />
             </div>            
         </div>
         </>
@@ -19,6 +27,8 @@ export default function Home(){
 
 
 /**
+ * 
+ * <ListOfCharacters characters={characters} />
  import React from 'react'
 
 export default function Home(){
