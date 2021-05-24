@@ -3,13 +3,13 @@ import useQuotes from '../../hooks/useQuotes'
 import useSingleCharacter from '../../hooks/useSingleCharacter'
 import Character from '../Character'
 import CharacterInd from '../CharacterInd'
-
+let id = ''
 export default function Detail({params}){
     const character = useSingleCharacter({id:params.id})
-    const quotes = useQuotes({id:params.id})
-    
-    console.log('impor data q', quotes)
-    console.log('impor data c', character)
+    id = id ? params.id : '1'
+    console.log('antes de error',id)
+    const quotes = useQuotes({id})
+
     if(character){
         return <>
                      <h3 className="App-title">{character.name}</h3>  

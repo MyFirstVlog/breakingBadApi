@@ -1,10 +1,15 @@
 import React from 'react'
 import useCharacter from '../../hooks/useCharacter'
 import ListOfCharacters from '../../components/ListOfCharacters'
-import getCharacter from '../../services/getCharacter'
+import SearchForm from '../../components/SearchForm'
+import {useState} from 'react'
+import {useLocation} from 'wouter'
+
 export default function Home(){
 
   const {characters, page, setPage}= useCharacter()
+ 
+
 
   const handleNextPage =()=>{
     console.log('entre a paginacion')
@@ -12,14 +17,18 @@ export default function Home(){
   }
   
  // const imagene = getCharacter()
-  console.log('homecha', characters)
+
   
     return (
         <>
         
         <div className="App-main">
-            <div className="App-results">
-                <h3 className="App-title">Main Characters</h3>      
+            <div className="App-results">       
+
+   
+
+                <h3 className="App-title">Main Characters</h3>   
+                               
                 <ListOfCharacters characters={characters} />                
             </div>            
         </div>

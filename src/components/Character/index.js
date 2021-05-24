@@ -9,12 +9,14 @@ export default function Character({char_id,img,name,status}){
             
             
                 <Link to={`/img/${char_id}`} className='Character-link'>          
-                        <img src={img}>   
+                        <img src={img}>  
                                              
                         </img>
                 </Link>
+                <small>Name: {name}</small>
+                <small>Status:{status}</small>
                 
-                <Modal name={name} status={status}/>
+               
                 
         </div>
     )

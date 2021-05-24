@@ -12,7 +12,7 @@ export default function CharacterInd({char_id,img,name,status, quotes}){
             <div className="Quotes">
                 
                 <h1>{name}-{status}</h1>
-                <p>{quotes}</p>
+                <p>"{quotes}"</p>
 
              </div>
         

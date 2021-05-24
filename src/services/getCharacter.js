@@ -1,11 +1,12 @@
 
 
 
-export default function getCharacter(page){
+export default function getCharacter(page,name,status){
    
+    const estado = status ? status  : 'characters'
     const pagina = page ? page : 0
     
-    const apiLink = `https://www.breakingbadapi.com/api/characters?limit=12&offset=${pagina.page*12}`
+    const apiLink = `https://www.breakingbadapi.com/api/${estado}?limit=12&offset=${pagina.page*12}`
 
     return fetch(apiLink)
             .then(res => res.json())

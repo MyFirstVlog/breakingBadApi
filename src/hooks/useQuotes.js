@@ -3,7 +3,7 @@ import getQuotes from '../services/getQuotes'
 
 
 export default function useQuotes({id}){
-
+    console.log('lo que llega a quotes', id)
     const [quotes, setQuotes] = useState({})
 
     useEffect(function(){        

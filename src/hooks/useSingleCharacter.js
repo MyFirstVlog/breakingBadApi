@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 import useCharacter from '../hooks/useCharacter'
-import getQuotes from '../services/getQuotes'
+
 import getSingleCharacter from '../services/getSingleCharacter'
 
 export default function useSingleCharacter({id}){
