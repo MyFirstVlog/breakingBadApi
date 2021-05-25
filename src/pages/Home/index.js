@@ -12,7 +12,7 @@ export default function Home(){
 
 
   const handleNextPage =()=>{
-    console.log('entre a paginacion')
+   
     setPage(prevPage => prevPage + 1)
   }
   

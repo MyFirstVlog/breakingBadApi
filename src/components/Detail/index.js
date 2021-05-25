@@ -7,7 +7,7 @@ let id = ''
 export default function Detail({params}){
     const character = useSingleCharacter({id:params.id})
     id = id ? params.id : '1'
-    console.log('antes de error',id)
+    
     const quotes = useQuotes({id})
 
     if(character){

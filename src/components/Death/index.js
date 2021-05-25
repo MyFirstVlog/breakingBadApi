@@ -3,7 +3,7 @@ import {Link} from 'wouter'
 import Modal from '../Modal'
 import './index.css'
 export default function Death({death_id,death,responsible,season}){
-    console.log(death,responsible,season)
+   
     return (
         <div className="Character">           
                               

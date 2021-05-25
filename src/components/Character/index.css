@@ -6,6 +6,12 @@
     width: auto;
     
   }
+  .Character-buttons{
+    position: absolute;
+    top : 8px;
+    right : 8px;
+    z-index: 1;
+  }
 .Character .btnInfo{
   background-color: #000;
   border: #000;

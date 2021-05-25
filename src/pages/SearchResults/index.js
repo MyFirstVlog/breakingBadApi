@@ -11,10 +11,10 @@ export default function SearchResults({params}){
     
 
     const handleNextPage =()=>{
-        console.log('entre a paginacion')
+        
         setPage(prevPage => prevPage + 1)
       }
-      console.log('homecha', characters)
+     
   
     return (
         <>

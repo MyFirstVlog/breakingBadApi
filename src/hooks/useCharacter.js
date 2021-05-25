@@ -8,7 +8,7 @@ const initialPage = 0
 export default function useCharacter(status, rating){
     
     status = status ? status : 'characters'
-    console.log('lo que me llega de sear', status)
+
     const {characters,setCharacters} = useContext(CharactersContext)
 
     const [page, setPage]= useState(initialPage)
@@ -24,7 +24,7 @@ export default function useCharacter(status, rating){
     useEffect(function(){
         
             if(page != initialPage){
-                console.log('estoy en chara')
+              
                 return getCharacter({page:page}).then(next =>{
                     setCharacters(prev => prev.concat(next))
                 })

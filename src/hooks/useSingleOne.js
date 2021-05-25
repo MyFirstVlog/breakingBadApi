@@ -22,7 +22,7 @@ export default function useSingleOne({id}){
             
         }).then((evt)=>listaF = evt)
 
-        console.log('laFetch12',listaF)
+     
     
   
     
@@ -33,14 +33,14 @@ export default function useSingleOne({id}){
         id = id.replace('%20',' ')
         loc = id.lastIndexOf('%20')
     }
-    console.log('id que sale del while',id)
+   
     
     /*const characters = useCharacter()
     if (characters) listaF = characters.characters*/
-    console.log('problema de fun', listaF)
+    
     const characterCache = listaF.find(single => single.name === id)
     if(characterCache){
-    console.log('id', characterCache.char_id)
+
     id = characterCache.char_id
     }else{
         id=1

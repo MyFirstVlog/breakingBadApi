@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {Link} from 'wouter'
 import useLocation from 'wouter/use-location'
+import useUser from '../../hooks/useUser'
 import SearchForm from '../SearchForm'
 
 export default function Header(params){
@@ -14,10 +15,15 @@ export default function Header(params){
     const handleChange = evt  =>{
       setKeyword(evt.target.value)
     }
-    
 
-    console.log('los params de header',params)
-    
+    const {isLogged,Logout} = useUser()
+    const handleClick = e => {
+        e.preventDefault()
+        console.log('logout')
+        Logout()
+    }
+
+  
     return(
         <>
             <header class="p-3 bg-dark text-white">
@@ -33,16 +39,16 @@ export default function Header(params){
 
                         <ul class="nav col-12 justify-content-center col-lg-auto me-lg-auto mb-2 mb-md-0">
                             <li><Link to='/'  class="nav-link px-2 text-white">Home</Link></li>   
-                            <li><a href="#" class="nav-link px-2 text-white">Favs</a></li>
+                            <li><Link to='/favspage' class="nav-link px-2 text-white">Comment Here</Link></li>
                             <li class="nav-item dropdown">
                             <a class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">User</a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Log In</a></li>                          
+                              <li><Link to='/login' class="dropdown-item">Log In</Link></li>                          
                                 <li><hr class="dropdown-divider"/></li>
-                                <li><a class="dropdown-item" href="#">Log Out</a></li>
+                                <li><Link onClick={handleClick} to = '/login' class="dropdown-item" >Log Out</Link> </li>
                             </ul>
                         </li>                       
-                        <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+                        
                         </ul>
                         <form onSubmit={handleSubmit} class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">     
                                 <input onChange={handleChange} value={keyword} type="search" class="form-control form-control-dark" placeholder="Search Character" aria-label="Search"/>        

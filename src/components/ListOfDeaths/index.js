@@ -6,7 +6,7 @@ import './index.css'
 
 export default function ListOfDeaths({characters}){
     let {listCharacters} = characters
-    console.log('puto', characters)
+    
     
         return <>
                   <div className="listOfCharacters"> {

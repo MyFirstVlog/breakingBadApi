@@ -5,9 +5,9 @@ import CharacterInd from '../../components/CharacterInd'
 import useSingleOne from '../../hooks/useSingleOne'
 
 export default function SearchIndv({params}){
-    console.log('params que me llegan', params)
+
     const {character,id} = useSingleOne({id:params.id})
-    console.log('esta es la id qu eme llega', id)
+
     const quotes = useQuotes({id})
 
     if(character){

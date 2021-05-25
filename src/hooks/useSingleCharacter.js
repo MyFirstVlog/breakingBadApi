@@ -7,7 +7,7 @@ export default function useSingleCharacter({id}){
     let listaF = []
     const characters = useCharacter()
     if (characters) listaF = characters.characters
-    console.log('problema de fun', listaF)
+
     const characterCache = listaF.find(single => single.char_id === id)
     
     const [character, setCharacter] = useState(characterCache)

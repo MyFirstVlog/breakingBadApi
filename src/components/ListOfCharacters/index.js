@@ -5,7 +5,7 @@ import './index.css'
 
 export default function ListOfCharacters({characters}){
     let {listCharacters} = characters
-    console.log('puto', characters)
+    
     
         return <>
                   <div className="listOfCharacters"> {
